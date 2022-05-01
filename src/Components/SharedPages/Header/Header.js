@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <nav
-  class=" w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light sticky top-0 z-50"
+  className=" w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light sticky top-0 z-50"
 >
-  <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+  <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
     <button
-      class="navbar-toggler text-gray-200 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
+      className="navbar-toggler text-gray-200 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent1"
@@ -20,7 +21,7 @@ const Header = () => {
         focusable="false"
         data-prefix="fas"
         data-icon="bars"
-        class="w-6"
+        className="w-6"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
@@ -31,26 +32,19 @@ const Header = () => {
         ></path>
       </svg>
     </button>
-    <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
-      <a class="text-xl text-white pr-2 font-semibold" href="googl.com">Navbar</a>
-      
-      <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
-        <li class="nav-item p-2">
-          <a class="nav-link text-white" href="googl.com">Dashboard</a>
+    <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
+      <Link to={'/'} className="text-xl text-white pr-2 font-semibold" >SportsWizard</Link>
+      <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+        <li className="nav-item p-2">
+          
+          <Link to={'/dashboard'} className="nav-link text-white">Dashboard</Link>
         </li>
-        <li class="nav-item p-2">
-          <a
-            class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="googl.com"
-            >Team</a
-          >
+        <li className="nav-item p-2">
+          
+            <Link to={'/blog'} className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0">Blog</Link>
         </li>
-        <li class="nav-item p-2">
-          <a
-            class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-            href="googl.com"
-            >Projects</a
-          >
+        <li className="nav-item p-2">
+        <Link to={'/inventory'} className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0">Inventory</Link>
         </li>
       </ul>
       
@@ -58,15 +52,15 @@ const Header = () => {
     
 
     
-    <div class="flex items-center relative">
+    <div className="flex items-center relative">
       
-      <a class="text-white opacity-60 hover:opacity-80 focus:opacity-80 mr-4" href="googl.com">
+      <a className="text-white opacity-60 hover:opacity-80 focus:opacity-80 mr-4" href="googl.com">
         <svg
           aria-hidden="true"
           focusable="false"
           data-prefix="fas"
           data-icon="shopping-cart"
-          class="w-4"
+          className="w-4"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
@@ -77,9 +71,9 @@ const Header = () => {
           ></path>
         </svg>
       </a>
-      <div class="dropdown relative">
+      <div className="dropdown relative">
         <a
-          class="text-white opacity-60 hover:opacity-80 focus:opacity-80 mr-4 dropdown-toggle hidden-arrow flex items-center"
+          className="text-white opacity-60 hover:opacity-80 focus:opacity-80 mr-4 dropdown-toggle hidden-arrow flex items-center"
           href="googl.com"
           id="dropdownMenuButton1"
           role="button"
@@ -91,7 +85,7 @@ const Header = () => {
             focusable="false"
             data-prefix="fas"
             data-icon="bell"
-            class="w-4"
+            className="w-4"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -102,40 +96,40 @@ const Header = () => {
             ></path>
           </svg>
           <span
-            class="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5"
+            className="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5"
             >1</span
           >
         </a>
         <ul
-          class="dropdown-menu min-w-max absolute  bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
+          className="dropdown-menu min-w-max absolute  bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
           aria-labelledby="dropdownMenuButton1"
         >
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Action</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Another action</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Something else here</a
             >
           </li>
         </ul>
       </div>
-      <div class="dropdown relative">
+      <div className="dropdown relative">
         <a
-          class="dropdown-toggle flex items-center hidden-arrow"
+          className="dropdown-toggle flex items-center hidden-arrow"
           href="googl.com"
           id="dropdownMenuButton2"
           role="button"
@@ -144,33 +138,33 @@ const Header = () => {
         >
           <img
             src="https://mdbootstrap.com/img/new/avatars/2.jpg"
-            class="rounded-full"
+            className="rounded-full"
             style={{height: "25px", width: "25px"}}
             alt=""
             loading="lazy"
           />
         </a>
         <ul
-          class="dropdown-menu min-w-max absolute  bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
+          className="dropdown-menu min-w-max absolute  bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
           aria-labelledby="dropdownMenuButton2"
         >
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Action</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Another action</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+              className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
               href="googl.com"
               >Something else here</a
             >

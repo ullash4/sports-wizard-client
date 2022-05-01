@@ -1,11 +1,12 @@
 import React from 'react';
+import Testimonials from '../../SharedPages/Testimonials/Testimonials';
 import Carousel from '../Carousel/Carousel';
 
 const Home = () => {
     return (
         <div>
             <Carousel></Carousel>
-            <h1>this is home page</h1>
+            <Testimonials></Testimonials>
         </div>
     );
 };
