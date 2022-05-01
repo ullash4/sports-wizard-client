@@ -44,7 +44,7 @@ const Header = () => {
             <Link to={'/blog'} className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0">Blog</Link>
         </li>
         <li className="nav-item p-2">
-        <Link to={'/inventory'} className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0">Inventory</Link>
+        <Link to={'/inventory'} className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0">Manage Inventory</Link>
         </li>
       </ul>
       
