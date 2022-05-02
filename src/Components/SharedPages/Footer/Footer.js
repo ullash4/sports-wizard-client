@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     const date = new Date().getFullYear()
     return (
-        <div>
+        <div className='pt-11'>
             <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
   <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
     <div className="mr-12 hidden lg:block">
