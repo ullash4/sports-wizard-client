@@ -40,10 +40,14 @@ const Footer = () => {
             <div className='d-flex justify-content-around align-items-center'>
                 <p> © {date} Copyright : SportsWizard</p>
                 <div>
-                    <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span>
-                    <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span>
-                    <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span>
-                    <span className='border border-dark rounded-circle p-3  ms-2'> <FaFacebookF className='fs-5' /> </span>
+                    
+                    <a className='text-decoration-none' href="www.goole.com"> <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
+                    
+                    <a className='text-decoration-none' href="f"> <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
+
+                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3  ms-2'> <FaFacebookF className='fs-5' /> </span></a>
+                    
                 </div>
             </div>
         </div>
