@@ -11,6 +11,7 @@ const Testimonials = () => {
     const [reviews] = useReviews()
     return (
         <div>
+            <h1 className='text-center fw-bolder'>Testimonial</h1>
             <Swiper
         slidesPerView={2}
         spaceBetween={10}
@@ -25,11 +26,15 @@ const Testimonials = () => {
         {reviews.map(data=>(
             
                 <SwiperSlide key={data._id} className="m-5 p-5 w-50 mx-auto">
-                    <div className='rounded-3 shadow-lg p-4 text-center'>
-                        <img src={data.picture} alt="" />
+                   <div className='row'>
+                       <div className='col-12'>
+                       <div className='rounded-3 shadow-lg p-4 text-center'>
+                        <img className='img-fluid rounded-circle mb-2' src={data.picture} alt="" />
                         <h4>{data.name}</h4>
-                        <p>{data.review.slice(0,20)}</p>
+                        <p>{data.review.slice(0,100)} <span className='fw-bolder'> ~{data.name} </span> </p>
                     </div>
+                       </div>
+                   </div>
                 </SwiperSlide>
         ))}
       </Swiper>

@@ -9,6 +9,7 @@ import ManageInventory from './Components/Pages/ManageInventory/ManageInventory'
 import SingleInventoryItem from './Components/Pages/SingleInventoryItem/SingleInventoryItem';
 import Footer from './Components/SharedPages/Footer/Footer';
 import Header from './Components/SharedPages/Header/Header';
+import NotfoundPage from './Components/SharedPages/NotfoundPage/NotfoundPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/table' element={<InventoryTablur></InventoryTablur>}></Route>
+        <Route path='*' element={<NotfoundPage></NotfoundPage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
