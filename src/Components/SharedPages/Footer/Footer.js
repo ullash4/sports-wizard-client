@@ -8,7 +8,7 @@ import { FaFacebookF } from 'react-icons/fa';
 const Footer = () => {
     const date = new Date().getFullYear()
     return (
-        <div className='container-fluid px-5 bg-secondary py-3'>
+        <div className='container-fluid px-5 shadow-lg py-3'>
             <div className='row g-3 pt-3'>
                 <div className='col-3'>
                     <h4>SportsWizard</h4>

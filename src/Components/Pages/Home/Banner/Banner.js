@@ -8,34 +8,34 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://i.ibb.co/17hNTQX/Sports-Ball-Icon-Soccer-Sports-T-Shirt-640-260-px.png"
+      src="https://i.ibb.co/prngGfn/All-jersey-Collections.png"
       alt="First slide"
     />
     <Carousel.Caption>
-      <h5>First slide label</h5>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h5>All Jersey Collections</h5>
+      <p>We stock jersey collections</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://i.ibb.co/17hNTQX/Sports-Ball-Icon-Soccer-Sports-T-Shirt-640-260-px.png"
+      src="https://i.ibb.co/RvfTXWD/All-jersey-Collections-2.png"
       alt="Second slide"
     />
     <Carousel.Caption>
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h5>All Game Equipments Collections</h5>
+      <p>We stock game equipments collections</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://i.ibb.co/17hNTQX/Sports-Ball-Icon-Soccer-Sports-T-Shirt-640-260-px.png"
+      src="https://i.ibb.co/fDGYkR2/All-jersey-Collections-1.png"
       alt="Third slide"
     />
     <Carousel.Caption>
-      <h5>Third slide label</h5>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h5>All Cricket Collections</h5>
+      <p>We stock cricket collections</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

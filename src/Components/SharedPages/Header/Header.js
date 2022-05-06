@@ -1,24 +1,34 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from 'react-router-dom';
+import auth from "../../../firebase.init";
+import Customlink from "./Customlink";
 
 
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut=()=>{
+    signOut(auth);
+  }
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect sticky="top" expand="lg" bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to='/' >SportsWizard</Navbar.Brand>
+          <Navbar.Brand className="fs-3" as={Link} to='/' >SportsWizard</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto mt-1">
-              <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
-              <Nav.Link as={Link} to='/inventory'>Manage Inventory</Nav.Link>
-              <Nav.Link as={Link} to='/blog' >My Item</Nav.Link>
+              <Customlink className="fs-5 text-decoration-none ms-3" to={'/inventory'}>Manage Inventory</Customlink>
+              <Customlink className="fs-5 text-decoration-none ms-3" to={'/blog'}>Blog</Customlink>
+              {user && <Customlink className="fs-5 text-decoration-none ms-3" to={'/blog'}>My Item</Customlink>}
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to='/login' >Log In</Nav.Link>
+              {user ? <button onClick={handleSignOut} className="border-0 fs-5 text-dark py-1 bg-light rounded-3 ms-3">Log Out</button> : <Nav.Link className="fs-5 text-dark py-1 bg-light rounded-3 ms-3" as={Link} to='/login' >Log In</Nav.Link>}
+              
+              
               
             </Nav>
           </Navbar.Collapse>
