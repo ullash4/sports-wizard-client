@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Blog from './Components/Pages/Blog/Blog';
 import Home from './Components/Pages/Home/Home';
@@ -11,6 +10,7 @@ import SingleInventoryItem from './Components/Pages/SingleInventoryItem/SingleIn
 import Footer from './Components/SharedPages/Footer/Footer';
 import Header from './Components/SharedPages/Header/Header';
 import NotfoundPage from './Components/SharedPages/NotfoundPage/NotfoundPage';
+import SocialLogIn from './Components/SharedPages/SocialLogIn/SocialLogIn';
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/table' element={<InventoryTablur></InventoryTablur>}></Route>
+        <Route path='/sociallog' element={<SocialLogIn></SocialLogIn>}></Route>
         <Route path='*' element={<NotfoundPage></NotfoundPage>}></Route>
       </Routes>
       <Footer></Footer>

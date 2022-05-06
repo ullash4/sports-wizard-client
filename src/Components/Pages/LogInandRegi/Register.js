@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
+import SocialLogIn from '../../SharedPages/SocialLogIn/SocialLogIn';
 
 const Register = () => {
   const emailRef = useRef("")
@@ -88,6 +89,7 @@ const Register = () => {
         </Button>
         <Link className="ms-2" to='/login'>Log In here</Link>
       </Form>
+      <SocialLogIn></SocialLogIn>
       </div>
     </div>
         </div>

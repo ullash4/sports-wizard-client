@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import Loading from "../../SharedPages/Loading/Loading";
 import { toast, ToastContainer } from "react-toastify";
+import SocialLogIn from "../../SharedPages/SocialLogIn/SocialLogIn";
 
 const LogIn = () => {
   const emailRef = useRef("");
@@ -92,16 +93,17 @@ const LogIn = () => {
                 placeholder="Password"
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Log In
-            </Button>
-          </Form>
-          <p>
+            <p>
             New to PhotoPedia ?
             <Link className="text-decoration-none" to="/register">
               Register here
             </Link>
           </p>
+            <Button variant="primary" type="submit">
+              Log In
+            </Button>
+          </Form>
+          
           <p>
             Forget Your password ?
             <button
@@ -111,6 +113,7 @@ const LogIn = () => {
               Reset Password
             </button>
           </p>
+          <SocialLogIn></SocialLogIn>
           < ToastContainer />
         </div>
       </div>
