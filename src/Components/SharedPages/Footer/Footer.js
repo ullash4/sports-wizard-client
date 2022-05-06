@@ -4,6 +4,9 @@ import { FaHome } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
+import { BsInstagram } from 'react-icons/bs';
+import { GrLinkedinOption } from 'react-icons/gr';
+import { TiSocialTwitter } from 'react-icons/ti';
 
 const Footer = () => {
     const date = new Date().getFullYear()
@@ -43,10 +46,10 @@ const Footer = () => {
                     
                     <a className='text-decoration-none' href="www.goole.com"> <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
                     
-                    <a className='text-decoration-none' href="f"> <span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="f"> <span className='border border-dark rounded-circle p-3 ms-2 '> <BsInstagram className='fs-5' /> </span></a>
 
-                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3 ms-2 '> <FaFacebookF className='fs-5' /> </span></a>
-                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3  ms-2'> <FaFacebookF className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3 ms-2 '> <GrLinkedinOption className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="s"><span className='border border-dark rounded-circle p-3  ms-2'> <TiSocialTwitter className='fs-5' /> </span></a>
                     
                 </div>
             </div>

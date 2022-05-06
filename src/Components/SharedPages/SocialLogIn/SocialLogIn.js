@@ -23,7 +23,14 @@ const SocialLogIn = () => {
         navigate('/');
     }
     return (
-        <div className=''>
+        <div>
+
+            <div className='d-flex align-items-center'>
+                <div className='border border-primary w-50 mx-auto'></div>
+                <p className='mx-4 mb-1 fs-5'>Or</p>
+                <div className='border  border-primary w-50 mx-auto'></div>
+            </div>
+
             <div className='d-flex align-items-center justify-justify-content-evenly'>
                 <h3>Continue With - </h3>
                 <button onClick={handleGoogleLogIn} className='border border-secondary p-2 m-2 rounded-circle bg-light'> <span className=''> <FcGoogle className='fs-2' /> </span> </button>

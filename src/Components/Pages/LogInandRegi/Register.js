@@ -57,7 +57,7 @@ const Register = () => {
         }}>
           <div className="container py-5 w-50 " >
       <div className="p-5 shadow-lg rounded-3 bg-white  mb-5">
-      <Form onSubmit={handleRegisterOnSubmit}>
+      <Form onSubmit={handleRegisterOnSubmit} className="mb-3">
           <h2 className="text-center">Register it's Free</h2>
           {errorElement}
         <Form.Group className="mb-3" controlId="formBasicEmail">
