@@ -11,11 +11,14 @@ import SingleInventoryItem from './Components/Pages/SingleInventoryItem/SingleIn
 import Footer from './Components/SharedPages/Footer/Footer';
 import Header from './Components/SharedPages/Header/Header';
 import NotfoundPage from './Components/SharedPages/NotfoundPage/NotfoundPage';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div>
       <Header></Header>
+      <ToastContainer></ToastContainer>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>

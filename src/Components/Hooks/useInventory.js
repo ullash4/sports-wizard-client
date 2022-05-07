@@ -8,7 +8,7 @@ const useInventory =()=>{
         .then(data=>setItems(data))
     },[])
 
-    return [items];
+    return [items , setItems];
 }
 
 export default useInventory;
