@@ -23,8 +23,9 @@ const Header = () => {
             <Nav className="ms-auto mt-1">
               <Customlink className="fs-5 text-decoration-none ms-3" to={'/inventory'}>Manage Inventory</Customlink>
               <Customlink className="fs-5 text-decoration-none ms-3" to={'/blog'}>Blog</Customlink>
-              {user && <Customlink className="fs-5 text-decoration-none ms-3" to={'/blog'}>My Item</Customlink>}
+              {user && <Customlink className="fs-5 text-decoration-none ms-3" to={'/myitems'}>My Item</Customlink>}
               {user && <Customlink className="fs-5 text-decoration-none ms-3" to={'/additems'}>Add Items</Customlink>}
+              {user && <Customlink className="fs-5 text-decoration-none ms-3" to={'/manageitem'}>Manage Item</Customlink>}
             </Nav>
             <Nav>
               {user ? <button onClick={handleSignOut} className="border-0 fs-5 text-dark py-1 bg-light rounded-3 ms-3">Log Out</button> : <Nav.Link className="fs-5 text-dark py-1 bg-light rounded-3 ms-3" as={Link} to='/login' >Log In</Nav.Link>}

@@ -13,6 +13,8 @@ import Header from './Components/SharedPages/Header/Header';
 import NotfoundPage from './Components/SharedPages/NotfoundPage/NotfoundPage';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import MyItems from './Components/Pages/MyItems/MyItems';
+import ManageItem from './Components/Pages/ManageItem/ManageItem';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+        <Route path='/manageitem' element={<ManageItem></ManageItem>}></Route>
         <Route path='/table' element={<InventoryTablur></InventoryTablur>}></Route>
         <Route path='/additems' element={<AddItems></AddItems>}></Route>
         <Route path='*' element={<NotfoundPage></NotfoundPage>}></Route>

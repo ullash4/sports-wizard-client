@@ -45,7 +45,7 @@ const AddItems = () => {
         <label>Quantity</label>
         <input className="mb-3" placeholder="Quantity" type="number" required {...register("quantity")} />
         
-        <input className="btn btn-primary" type="submit" />
+        <input className="btn btn-primary w-25 mx-auto" value={"Add Item"} type="submit" />
       </form>
       </div>
       <ToastContainer></ToastContainer>

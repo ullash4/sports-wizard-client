@@ -5,7 +5,7 @@ import useInventory from '../../Hooks/useInventory';
 
 const InventoryTablur = () => {
     const [items , setItems ] = useInventory();
-    const handle=(id)=>{
+    const handleDelete=(id)=>{
       const sure = window.confirm("Are you sure ?")
       if(sure){
         const url = `http://localhost:5000/product/${id}`
@@ -38,7 +38,7 @@ const InventoryTablur = () => {
           <td>{item.name}</td>
           <td>{item.supplier}</td>
           <td>${item.price.slice(1,10)}</td>
-          <button onClick={()=>handle(item._id)} className='border-0 fs-2 fw-bolder text-danger'>X</button>
+          <button onClick={()=>handleDelete(item._id)} className='border-0 fs-2 fw-bolder text-danger'>X</button>
         </tr>
       </tbody>
       ))
