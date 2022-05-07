@@ -5,7 +5,7 @@ const useSingleInventory = () =>{
     const {id} = useParams();
     const [item, setItem] = useState({})
     useEffect(()=>{
-        const url = `http://localhost:3000/inventory/${id}`;
+        const url = `http://localhost:5000/product/${id}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setItem(data))
