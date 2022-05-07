@@ -6,6 +6,30 @@ const SingleInventoryItem = () => {
     const [id, item] = useSingleInventory()
     const quantityRef = useRef("")
 
+    const handleDeliverdItem=(e)=>{
+        e.preventDefault();
+        const quantity = parseInt(item.quantity);
+        const result = quantity - 1;
+        const updateQuantity = {result}
+
+        // Send 1 minus quantity to server
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url,{
+            method: "PUT",
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+        .then(res=> res.json())
+        .then(data=>{
+            console.log('success', data);
+            toast("1 Product Deliverd")
+        })
+    }
+
+
+
     const handleRestockQty=(e)=>{
         e.preventDefault()
         const restQuantity = parseInt(item.quantity);
@@ -27,16 +51,17 @@ const SingleInventoryItem = () => {
         .then(res=> res.json())
         .then(data=>{
             console.log('success', data);
-            toast("Quantity restocked")
+            toast("Product restocked")
         })
 
     }
 
     let sold;
     if(item.quantity === 0){
-        sold= "Sold Out"
+        // sold= "Sold Out"
+        sold = <span className='text-danger'>Sold out</span>
     }else{
-        sold="In Stock"
+        sold = <span className='text-success'>In stock</span>
     }
 
     return (
@@ -52,10 +77,10 @@ const SingleInventoryItem = () => {
                     <h5>Price : {item.price}</h5>
                     
                     <h5>Quantity : {item.quantity}</h5>
-                    <h5>Sold : {sold}</h5>
+                    <h5>{sold}</h5>
                     <p>{item.description}</p>
                     <div className='d-flex align-items-center justify-content-between px-2'>
-                    <button className='btn btn-primary'>Delivered</button>
+                    <button onClick={handleDeliverdItem} className='btn btn-primary'>Delivered</button>
                     <form >
                     <button onClick={handleRestockQty} className='btn btn-primary me-2'>Restock</button>
                         <input type="number"  ref={quantityRef} name="number" id="" placeholder='Write Quantity'/>
