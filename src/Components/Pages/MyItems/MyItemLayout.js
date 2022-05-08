@@ -2,10 +2,8 @@ import React from "react";
 import { toast } from "react-toastify";
 import useInventory from "../../Hooks/useInventory";
 
-const InventoryItems = ({ item }) => {
-  const { _id, name, picture, description, supplier } = item;
+const MyItemLayout = (props) => {
   const [items, setItems] = useInventory();
-
   const handleDelete = (id) => {
     const sure = window.confirm("Are you sure ?");
     if (sure) {
@@ -22,15 +20,20 @@ const InventoryItems = ({ item }) => {
         });
     }
   };
-
   return (
     <div className="col-12 col-md-6 col-lg-4">
       <div className="rounded-3 shadow-lg p-4">
-        <img className="img-fluid rounded-3" src={picture} alt="" />
-        <h4>{name}</h4>
-        <p>Supplier : {supplier}</p>
-        <p>{description.slice(0, 100)}</p>
-        <button onClick={() => handleDelete(_id)} className="btn btn-danger">
+        <img
+          className="img-fluid rounded-3"
+          src={props?.item?.picture}
+          alt=""
+        />
+        <h1>{props?.item?.name}</h1>
+        <p>{props?.item?.description}</p>
+        <button
+          onClick={() => handleDelete(props?.item?._id)}
+          className="btn btn-danger"
+        >
           Delete
         </button>
       </div>
@@ -38,4 +41,4 @@ const InventoryItems = ({ item }) => {
   );
 };
 
-export default InventoryItems;
+export default MyItemLayout;
