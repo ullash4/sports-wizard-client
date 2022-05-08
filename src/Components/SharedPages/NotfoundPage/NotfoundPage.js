@@ -11,7 +11,7 @@ const NotfoundPage = () => {
             <div className=''>
                 <h1 className='display-2 fw-bolder'>You are Lost Buddy</h1>
                 <p className='display-5'>The page you have searching for is not found. Please click below button to return home</p>
-                <Link to={'/'}> <button className='px-5 py-3 bg-dark rounded-3 text-white fs-4 border-0'>Return Home</button></Link>
+                <Link to={'/'}> <button className='px-5 py-3 bg-primary rounded-3 text-white fs-4 border-0'>Return Home</button></Link>
             </div>
         </div>
     </div>

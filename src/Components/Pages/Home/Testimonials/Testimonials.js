@@ -13,8 +13,8 @@ const Testimonials = () => {
         <div>
             <h1 className='text-center fw-bolder'>Testimonial</h1>
             <Swiper
-        slidesPerView={2}
-        spaceBetween={10}
+        slidesPerView={1}
+        spaceBetween={5}
         loop={true}
         pagination={{
           clickable: true,
@@ -25,7 +25,7 @@ const Testimonials = () => {
       >
         {reviews.map(data=>(
             
-                <SwiperSlide key={data._id} className="m-5 p-5 w-50 mx-auto">
+                <SwiperSlide key={data._id} className="m-3 p-1 w-50 mx-auto">
                    <div className='row'>
                        <div className='col-12'>
                        <div className='rounded-3 shadow-lg p-4 text-center'>

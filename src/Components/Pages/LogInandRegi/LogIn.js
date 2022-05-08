@@ -70,7 +70,7 @@ const LogIn = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container-fluid py-5 w-50  ">
+      <div className="py-5 w-50  mx-auto">
         <div className="p-5 shadow-lg bg-white rounded-3 mb-5">
           <Form onSubmit={handleLogInOnSubmit}>
             <h2 className="text-center">Please Log In</h2>

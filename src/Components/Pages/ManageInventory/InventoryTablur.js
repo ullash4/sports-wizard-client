@@ -22,7 +22,7 @@ const InventoryTablur = () => {
       }
     }
     return (
-        <div className='container'>
+        <div className='container my-4 shadow-lg p-2 rounded-3'>
            <table className="table">
   <thead>
     <tr>

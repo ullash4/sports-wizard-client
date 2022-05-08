@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useInventory from '../../Hooks/useInventory';
 import ItemsForHome from './ItemsForHome';
 
@@ -12,6 +13,7 @@ const InventoryItemsForHome = () => {
                 items.slice(0,6).map(item=><ItemsForHome key={item._id} item={item}></ItemsForHome>)
             }
             </div>
+            <Link to='/inventory'><button className='btn btn-primary mt-5'>Manage Inventory</button></Link>
             
         </div>
     );

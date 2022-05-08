@@ -33,7 +33,7 @@ const SocialLogIn = () => {
                 <div className='border  border-primary w-50 mx-auto'></div>
             </div>
 
-            <div className='d-flex align-items-center justify-justify-content-evenly'>
+            <div className='d-flex flex-column  d-md-flex flex-md-row justify-content-md-evenly align-items-md-center'>
                 <h3>Continue With - </h3>
                 <button onClick={handleGoogleLogIn} className='border border-secondary p-2 m-2 rounded-circle bg-light'> <span className=''> <FcGoogle className='fs-2' /> </span> </button>
                 <button onClick={handleGitHubLogIn} className='border border-secondary p-2 m-2 rounded-circle bg-light'> <span className=''> <FaGithub className='fs-2' /> </span> </button>

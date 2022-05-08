@@ -44,11 +44,11 @@ const Footer = () => {
                 <p> © {date} Copyright : SportsWizard</p>
                 <div className='my-3'>
                     
-                    <a className='text-decoration-none' href="www.goole.com"> <span className='shadow-lg rounded-circle p-3 m-2'> <FaFacebookF className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="https://www.facebook.com/"> <span className='shadow-lg rounded-circle p-3 m-2'> <FaFacebookF className='fs-5' /> </span></a>
                     
-                    <a className='text-decoration-none' href="f"> <span className='shadow-lg rounded-circle p-3 m-2 '> <BsInstagram className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="https://www.instagram.com/"> <span className='shadow-lg rounded-circle p-3 m-2 '> <BsInstagram className='fs-5' /> </span></a>
 
-                    <a className='text-decoration-none' href="s"><span className='shadow-lg rounded-circle p-3  m-2'> <GrLinkedinOption className='fs-5' /> </span></a>
+                    <a className='text-decoration-none' href="https://www.linkedin.com/in/imran-mahmud-ullash-561940235/"><span className='shadow-lg rounded-circle p-3  m-2'> <GrLinkedinOption className='fs-5' /> </span></a>
                     
                     
                 </div>

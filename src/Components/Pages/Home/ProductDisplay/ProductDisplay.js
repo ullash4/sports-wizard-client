@@ -9,7 +9,8 @@ import { EffectCoverflow, Pagination } from "swiper";
 const ProductDisplay = () => {
     const [products] = useProduct()
     return (
-        <div>
+        <div className='container-fluid shadow-lg my-5 p-5'>
+          <h1 className='text-center'>Some of our product displayed</h1>
             <Swiper
         effect={"coverflow"}
         grabCursor={true}

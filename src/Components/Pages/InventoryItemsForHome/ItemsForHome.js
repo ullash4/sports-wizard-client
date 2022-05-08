@@ -8,7 +8,7 @@ const ItemsForHome = ({item}) => {
       navigate(`inventory/${_id}`)
     }
     return (
-        <div className="col-4">
+        <div className="col-12 col-md-6 col-lg-4">
         <div className="rounded-3 shadow-lg p-4">
           <img className="img-fluid rounded-3" src={picture} alt="" />
           <h4>{name}</h4>
