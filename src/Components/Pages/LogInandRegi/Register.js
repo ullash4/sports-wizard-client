@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../SharedPages/Loading/Loading';
@@ -11,6 +11,7 @@ const Register = () => {
   const emailRef = useRef("")
   const passwordRef = useRef("")
   const navigate = useNavigate()
+  const location = useLocation()
   const [agree, setAgree] = useState(false);
 
   const [
@@ -20,7 +21,7 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-  
+  const from = location.state?.from?.pathname || "/";
 
   let errorElement;
 
@@ -45,7 +46,7 @@ const Register = () => {
   }
 
   if(user){
-    navigate('/')
+    navigate(from, { replace: true });
   }
 
     return (

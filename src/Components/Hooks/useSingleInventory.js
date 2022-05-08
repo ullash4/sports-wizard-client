@@ -9,7 +9,7 @@ const useSingleInventory = () =>{
         fetch(url)
         .then(res=>res.json())
         .then(data=>setItem(data))
-    },[id])
+    },[item])
     return [id, item];
 }
 

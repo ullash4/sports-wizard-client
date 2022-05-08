@@ -29,6 +29,7 @@ const InventoryTablur = () => {
       <th scope="col">Name</th>
       <th scope="col">Supplier</th>
       <th scope="col">Price</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
   {
@@ -38,7 +39,7 @@ const InventoryTablur = () => {
           <td>{item.name}</td>
           <td>{item.supplier}</td>
           <td>${item.price.slice(1,10)}</td>
-          <button onClick={()=>handleDelete(item._id)} className='border-0 fs-2 fw-bolder text-danger'>X</button>
+          <td><button onClick={()=>handleDelete(item._id)} className='border-0 rounded-circle  fw-bolder text-danger'>X</button></td>
         </tr>
       </tbody>
       ))

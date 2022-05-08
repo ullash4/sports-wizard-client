@@ -23,6 +23,7 @@ const SingleInventoryItem = () => {
         })
         .then(res=> res.json())
         .then(data=>{
+            
             console.log('success', data);
             toast("1 Product Deliverd")
         })
@@ -50,6 +51,7 @@ const SingleInventoryItem = () => {
         })
         .then(res=> res.json())
         .then(data=>{
+            
             console.log('success', data);
             toast("Product restocked")
         })
@@ -74,7 +76,7 @@ const SingleInventoryItem = () => {
                     <h1>Product Name : {item.name}</h1>
                     <h5>Product Id : {id}</h5>
                     <h5>Supplier : {item.supplier}</h5>
-                    <h5>Price : {item.price}</h5>
+                    <h5>Price : ${item.price}</h5>
                     
                     <h5>Quantity : {item.quantity}</h5>
                     <h5>{sold}</h5>

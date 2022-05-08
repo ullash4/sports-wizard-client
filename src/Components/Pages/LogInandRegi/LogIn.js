@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import 'react-toastify/dist/ReactToastify.css';
 import {
@@ -15,11 +15,15 @@ const LogIn = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
+  const location = useLocation()
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+
+
+  const from = location.state?.from?.pathname || "/";
 
   let errorElement;
 
@@ -53,7 +57,7 @@ const LogIn = () => {
   };
 
   if (user) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
   return (
@@ -66,7 +70,7 @@ const LogIn = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container py-5 w-50 ">
+      <div className="container-fluid py-5 w-50  ">
         <div className="p-5 shadow-lg bg-white rounded-3 mb-5">
           <Form onSubmit={handleLogInOnSubmit}>
             <h2 className="text-center">Please Log In</h2>

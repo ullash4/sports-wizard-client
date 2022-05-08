@@ -3,13 +3,15 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SocialLogIn = () => {
     const navigate = useNavigate()
     const [signInWithGithub, user] = useSignInWithGithub(auth);
     const [signInWithGoogle, user2] = useSignInWithGoogle(auth);
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
 
     
 
@@ -20,7 +22,7 @@ const SocialLogIn = () => {
         signInWithGoogle();
     }
     if(user || user2){
-        navigate('/');
+        navigate(from, { replace: true });
     }
     return (
         <div>
