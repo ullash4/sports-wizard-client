@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC8zJjdg_Jjt95HXE9n30-EdDq0c58u-ck",
-  authDomain: "sports-wizard-e919a.firebaseapp.com",
-  projectId: "sports-wizard-e919a",
-  storageBucket: "sports-wizard-e919a.appspot.com",
-  messagingSenderId: "885462925339",
-  appId: "1:885462925339:web:d5a1446675733b93e4f8be"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId,
 };
 
 
