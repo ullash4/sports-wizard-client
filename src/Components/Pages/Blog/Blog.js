@@ -1,8 +1,10 @@
 import React from "react";
+import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 
 const Blog = () => {
   return (
     <div className="container">
+      <DynamicTitle name='Blog' />
       <div className="p-3 shadow-lg m-5">
         <h1>Javascript vs Nodejs</h1>
         <p>Javascript is a programming language that is used for writing scripts on the website.NodeJS is a Javascript runtime environment.Nodejs is used in server-side development.Javascript is used in frontend development.</p>

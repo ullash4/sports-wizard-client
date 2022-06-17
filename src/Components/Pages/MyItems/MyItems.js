@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 import MyItemLayout from "./MyItemLayout";
 
 // import axios from 'axios'
@@ -20,6 +21,7 @@ const MyItems = () => {
   }, [email]);
   return (
     <div className="container">
+      <DynamicTitle name='My Item' />
       <h1>Here are some of my items {items.length} </h1>
       <div className="row g-5 my-5">
         {items.map((item) => (

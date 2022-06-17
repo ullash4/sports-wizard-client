@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import useInventory from "../../Hooks/useInventory";
+import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 
 const InventoryTablur = () => {
   const [items, setItems] = useInventory();
@@ -23,6 +24,7 @@ const InventoryTablur = () => {
   };
   return (
     <div className="container my-4 shadow-lg p-2 rounded-3">
+      <DynamicTitle name='Manage Inventory' />
       <Link to="/additems">
         <button className="btn btn-primary m-3 shadow">Add New Items</button>
       </Link>

@@ -10,6 +10,7 @@ import {
 import Loading from "../../SharedPages/Loading/Loading";
 import { toast, ToastContainer } from "react-toastify";
 import SocialLogIn from "../../SharedPages/SocialLogIn/SocialLogIn";
+import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 
 const LogIn = () => {
   const emailRef = useRef("");
@@ -70,6 +71,7 @@ const LogIn = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <DynamicTitle name="Log In" />
       <div className="py-5 w-50  mx-auto">
         <div className="p-5 shadow-lg bg-white rounded-3 mb-5">
           <Form onSubmit={handleLogInOnSubmit}>

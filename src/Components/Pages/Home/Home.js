@@ -1,4 +1,5 @@
 import React from 'react';
+import DynamicTitle from '../../SharedPages/DynamicTitle/DynamicTitle';
 import Loading from '../../SharedPages/Loading/Loading';
 import InventoryItemsForHome from '../InventoryItemsForHome/InventoryItemsForHome';
 import Banner from './Banner/Banner';
@@ -12,6 +13,7 @@ const Home = () => {
     }else{
         return (
             <div>
+                <DynamicTitle name='Home' />
                 <Banner></Banner>
                 <InventoryItemsForHome></InventoryItemsForHome>
                 

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
+import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
@@ -26,6 +27,7 @@ const AddItems = () => {
   };
   return (
     <div className="w-50 mx-auto p-3 shadow-lg rounded-3 my-5">
+      <DynamicTitle name='Add Items' />
       <h1 className="text-center mb-4">Add Items</h1>
       <div className="">
         <form

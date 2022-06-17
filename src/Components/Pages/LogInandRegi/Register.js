@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import DynamicTitle from '../../SharedPages/DynamicTitle/DynamicTitle';
 import Loading from '../../SharedPages/Loading/Loading';
 import SocialLogIn from '../../SharedPages/SocialLogIn/SocialLogIn';
 
@@ -56,6 +57,7 @@ const Register = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
         }}>
+          <DynamicTitle name='Register' />
           <div className="container py-5 w-50 " >
       <div className="p-5 shadow-lg rounded-3 bg-white  mb-5">
       <Form onSubmit={handleRegisterOnSubmit} className="mb-3">
