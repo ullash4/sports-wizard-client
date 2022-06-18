@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
 import MyItemLayout from "./MyItemLayout";
+import { motion } from "framer-motion";
 
 // import axios from 'axios'
 
@@ -20,7 +21,9 @@ const MyItems = () => {
       });
   }, [email]);
   return (
-    <div className="container">
+    <motion.div className="container" initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}>
       <DynamicTitle name='My Item' />
       <h1>Here are some of my items {items.length} </h1>
       <div className="row g-5 my-5">
@@ -28,7 +31,7 @@ const MyItems = () => {
           <MyItemLayout key={item._id} item={item}></MyItemLayout>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

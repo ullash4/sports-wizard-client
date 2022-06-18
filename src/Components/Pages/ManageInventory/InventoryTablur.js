@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import useInventory from "../../Hooks/useInventory";
 import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
+import { motion } from "framer-motion";
 
 const InventoryTablur = () => {
   const [items, setItems] = useInventory();
@@ -23,7 +24,11 @@ const InventoryTablur = () => {
     }
   };
   return (
-    <div className="container my-4 shadow-lg p-2 rounded-3">
+    <motion.div className="container my-4 shadow-lg p-2 rounded-3"
+    initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}
+    >
       <DynamicTitle name='Manage Inventory' />
       <Link to="/additems">
         <button className="btn btn-primary m-3 shadow">Add New Items</button>
@@ -55,7 +60,7 @@ const InventoryTablur = () => {
           </tbody>
         ))}
       </table>
-    </div>
+    </motion.div>
   );
 };
 

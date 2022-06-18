@@ -1,9 +1,12 @@
 import React from "react";
 import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
+import { motion } from "framer-motion";
 
 const Blog = () => {
   return (
-    <div className="container">
+    <motion.div className="container" initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}>
       <DynamicTitle name='Blog' />
       <div className="p-3 shadow-lg m-5">
         <h1>Javascript vs Nodejs</h1>
@@ -17,7 +20,7 @@ const Blog = () => {
         <h1> Differences between sql and nosql databases.</h1>
         <p>SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

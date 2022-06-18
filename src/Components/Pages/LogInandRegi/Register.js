@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import DynamicTitle from '../../SharedPages/DynamicTitle/DynamicTitle';
 import Loading from '../../SharedPages/Loading/Loading';
 import SocialLogIn from '../../SharedPages/SocialLogIn/SocialLogIn';
+import { motion } from "framer-motion";
 
 const Register = () => {
   const emailRef = useRef("")
@@ -51,12 +52,16 @@ const Register = () => {
   }
 
     return (
-        <div className='' style={{  
+        <motion.div className='' style={{  
           backgroundImage: "url(" + "https://i.ibb.co/6NFCDHQ/wickedbackground-1.png" + ")",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
-        }}>
+        }}
+        initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}
+        >
           <DynamicTitle name='Register' />
           <div className="container py-5 w-50 " >
       <div className="p-5 shadow-lg rounded-3 bg-white  mb-5">
@@ -95,7 +100,7 @@ const Register = () => {
       <SocialLogIn></SocialLogIn>
       </div>
     </div>
-        </div>
+        </motion.div>
     );
 };
 

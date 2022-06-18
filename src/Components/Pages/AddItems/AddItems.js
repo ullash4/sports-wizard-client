@@ -5,6 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
 import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
+import { motion } from "framer-motion";
 
 const AddItems = () => {
   const { register, handleSubmit } = useForm();
@@ -26,7 +27,11 @@ const AddItems = () => {
     toast("Your Item Added to our Database");
   };
   return (
-    <div className="w-50 mx-auto p-3 shadow-lg rounded-3 my-5">
+    <motion.div className="w-50 mx-auto p-3 shadow-lg rounded-3 my-5" 
+    initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}
+    >
       <DynamicTitle name='Add Items' />
       <h1 className="text-center mb-4">Add Items</h1>
       <div className="">
@@ -105,7 +110,7 @@ const AddItems = () => {
         </form>
       </div>
       <ToastContainer></ToastContainer>
-    </div>
+    </motion.div>
   );
 };
 

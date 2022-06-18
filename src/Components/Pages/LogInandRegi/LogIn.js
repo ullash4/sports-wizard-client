@@ -11,6 +11,7 @@ import Loading from "../../SharedPages/Loading/Loading";
 import { toast, ToastContainer } from "react-toastify";
 import SocialLogIn from "../../SharedPages/SocialLogIn/SocialLogIn";
 import DynamicTitle from "../../SharedPages/DynamicTitle/DynamicTitle";
+import { motion } from "framer-motion";
 
 const LogIn = () => {
   const emailRef = useRef("");
@@ -62,7 +63,7 @@ const LogIn = () => {
   }
 
   return (
-    <div
+    <motion.div
       style={{
         backgroundImage:
           "url(" + "https://i.ibb.co/74ssLH6/wickedbackground-2.png" + ")",
@@ -70,6 +71,9 @@ const LogIn = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
+      initial={{width : 0}}
+    animate={{width: '100%'}}
+    exit={{x: window.innerWidth, transition:{duration : 0.1}}}
     >
       <DynamicTitle name="Log In" />
       <div className="py-5 w-50  mx-auto">
@@ -123,7 +127,7 @@ const LogIn = () => {
           < ToastContainer />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
